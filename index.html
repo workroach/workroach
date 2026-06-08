@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workroach — Survive. Expose. Scatter Them.</title>
+    <meta name="description" content="Find out if your employer is exploiting you. Free, anonymous, brutal." />
+    <meta property="og:title" content="Workroach — The Workplace Audit That Never Dies" />
+    <meta property="og:description" content="Find out if your employer is draining you dry. workroach.com" />
+    <meta property="og:url" content="https://workroach.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@workroach" />
+    <meta name="theme-color" content="#d4820a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Workroach" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+    <!-- Google One Tap -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Netlify Identity Widget — must load before app -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230c0a08'/%3E%3Cellipse cx='32' cy='37' rx='13' ry='17' fill='%231a1a0f' stroke='%23d4820a' stroke-width='2'/%3E%3Cellipse cx='32' cy='22' rx='9' ry='8' fill='%231a1a0f' stroke='%23d4820a' stroke-width='2'/%3E%3C/svg%3E" />
+  </head>
+  <body class="dark">
+    <!-- Netlify Forms detection -->
+    <form name="workroach-members" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <input type="text" name="joined" />
+    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => { document.location.href = "/"; });
+          }
+        });
+        window.netlifyIdentity.init();
+      }
+    </script>
+  </body>
+</html>
