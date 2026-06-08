@@ -197,7 +197,7 @@ function AISection({ btnText, prompt, color, btnStyle }) {
     try {
       const res = await fetch('/.netlify/functions/claude', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] }),
+        body: JSON.stringify({ model: 'claude-sonnet-4-5-20251001', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] }),
       });
       const data = await res.json();
       setText((data.content && data.content.map(b => b.text || '').join('')) || 'Could not generate.');
